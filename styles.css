@@ -1,15 +1,14 @@
 body {
 font-family: Arial, sans-serif;
-color: #222;
+color: #ffffff;
 max-width: 1000px;
 margin: 40px auto;
+
+background-color: #000000;
 }
 h1 {
-color: #024842;
+color: #A100FF;
 }
 h2 {
-color: #527588
-}
-h3 {
-color: #cb7bd3
+color: #A100FF
 }
