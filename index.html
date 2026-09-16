@@ -8,16 +8,79 @@
      <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
         <h1>Hello, Web!</h1>
+        <p> This is a student project for Web Development at IIT</p>
+        </header>
+
+        <nav>
+            <a href= "#">Home</a>
+            <a href= "#">About</a>
+            <a href= "#">Contact</a>
+        </nav>
+        <main> 
         <p>This is my first HTML page for this course.</p>
         <h2>About This Page.</h2>
-        <p>This is EXCITING! I'm enjoying the process of applying new concepts and building my HTML & CSS skills. I look forward to seeing how this progresses over the term.</p>
+        <p>This is EXCITING! I'm enjoying the process of applying new concepts and building my HTML &amp; CSS skills. I look forward to seeing how this progresses over the term.</p>
         <ul>
             <li>This term, I want to learn how to build beautiful user interfaces.</li>
             <li>This term, I want to learn how to build a landing page.</li>
             <li>This term, I want to gain proficient HTML & CSS skills.</li>
         </ul>
         <a href="https://www.w3schools.com/html">I enjoy this user friendly website that teaches HTML basics</a>
-        <img src="ChicagoSkylines copy 2.png" alt="There's no skyline like a Chicago skyline">
+        <img src="Chicago-Skylines.png" alt="There's no skyline like a Chicago skyline">
+        <table>
+            <caption> My Children's Weekly Activities</caption>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Swimming</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Gymnastics</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Piano</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Swimming</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Swimming</td>
+                </tr>
+            </tbody>
+        </table>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="msg">Message</label>
+            <textarea id="msg" name="msg"></textarea>
+
+            <label for="referral">How did you find this page?</label>
+            <select id="referral" name="referral">
+                <option value="search">Search engine</option>
+                <option value="social">Social media</option>
+                <option value="friend">A friend</option>
+            </select>
+            <button type="submit">Send</button>
+       </form>
+        </main>
+        <footer>
+        <p>&copy; Ruth Awam 2026</p>
+        </footer>
 </body>
 </html>
