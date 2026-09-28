@@ -1,4 +1,4 @@
-<!-- Ruth Awam - Lab 4 -->
+<!-- Ruth Awam - Lab 5 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,7 @@
         <p> This is a student project for Web Development at IIT</p>
         </header>
 
-        <nav>
+        <nav id="main-nav">
             <a href= "#">Home</a>
             <a href= "#">About</a>
             <a href= "#">Contact</a>
@@ -25,7 +25,7 @@
         <ul>
             <li>This term, I want to learn how to build beautiful user interfaces.</li>
             <li>This term, I want to learn how to build a landing page.</li>
-            <li>This term, I want to gain proficient HTML & CSS skills.</li>
+            <li>This term, I want to gain proficient HTML &amp; CSS skills.</li>
         </ul>
         <a href="https://www.w3schools.com/html">I enjoy this user friendly website that teaches HTML basics</a>
         <img src="Chicago-Skylines.png" alt="There's no skyline like a Chicago skyline">
@@ -67,6 +67,9 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
 
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip" pattern="^\d{5}$" required>
+
             <label for="msg">Message</label>
             <textarea id="msg" name="msg"></textarea>
 
@@ -75,12 +78,20 @@
                 <option value="search">Search engine</option>
                 <option value="social">Social media</option>
                 <option value="friend">A friend</option>
+
             </select>
             <button type="submit">Send</button>
+
        </form>
         </main>
         <footer>
         <p>&copy; Ruth Awam 2026</p>
         </footer>
+
+        <script>
+            const zipPattern = /^\d{5}$/;
+            const isValidZip = zipPattern.test(zipInput.value);
+            console.log(isValidZip); // true or false
+        </script>
 </body>
 </html>

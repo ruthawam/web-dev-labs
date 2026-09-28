@@ -7,8 +7,60 @@ margin: 40px auto;
 background-color: #000000;
 }
 h1 {
-color: #A100FF;
+color: #ffffff;
 }
 h2 {
 color: #A100FF
+}
+* {
+box-sizing: border-box;
+}
+header {
+padding: 24px;
+background-color: #575757;
+color: white;
+margin-bottom: 16px;
+}
+
+#main-nav {
+  background-color: #A100FF;
+}
+
+#main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+}
+
+#main-nav a:hover {
+  background-color: #000000;
+}
+
+#main-nav {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    background-color: #A100FF;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 10px;
+    border: 0.5px solid #636363;
+}
+thead {
+    background-color: #A100FF;
+}
+input, textarea, select {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+thead th {
+    color: #ffffff;
 }
