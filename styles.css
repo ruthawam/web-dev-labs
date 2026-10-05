@@ -64,3 +64,34 @@ input, textarea, select {
 thead th {
     color: #ffffff;
 }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.image-wrap {
+    position: relative;
+    display: inline-block;
+}
+.badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    right: 8px;
+    background-color: #dc2626;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    z-index: 5;
+}
+@media (max-width: 600px) {
+    #main-nav {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+#main-nav a {
+    transition: background-color 0.2s ease;
+}
