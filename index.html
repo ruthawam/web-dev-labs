@@ -1,4 +1,4 @@
-<!-- Ruth Awam - Lab 6 -->
+<!-- Ruth Awam - Lab 7 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,6 +84,9 @@
             <button type="submit">Send</button>
 
        </form>
+       <button id="like-btn">Like this page</button>
+       <p id="like-count">0 likes</p>
+       <button id="theme-btn">Toggle dark mode</button>
         </main>
         <footer>
         <p>&copy; Ruth Awam 2026</p>
@@ -91,6 +94,7 @@
 
         <script>
             const zipPattern = /^\d{5}$/;
+              const zipInput = document.getElementById("zip");
             const isValidZip = zipPattern.test(zipInput.value);
             console.log(isValidZip); // true or false
         </script>
@@ -98,5 +102,6 @@
         <img src="Chicago_Skyline.jpg" alt="There's no skyline like a Chicago skyline">
         <span class="badge">New</span>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
