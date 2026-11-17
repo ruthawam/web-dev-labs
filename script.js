@@ -1,4 +1,10 @@
-const name = "Ada";
+<!-- Ruth Awam - Lab 10 -->
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+}
+
+const name = "Ruth";
 let labsCompleted = 6;
 let isEnrolled = true;
 
@@ -11,6 +17,8 @@ const likeCount = document.querySelector("#like-count");
 const themeBtn = document.querySelector("#theme-btn");
 themeBtn.addEventListener("click", function() {
     document.body.classList.toggle("dark");
+    const isDark = document.body.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 const goals = [
@@ -38,21 +46,22 @@ function updateLikeDisplay(count) {
     }
 }
 
-function createLikeCounter () {
-    let likes = 0; // private - not reachable from outside
+const LikeCounter = {
+    likes: Number(localStorage.getItem("likes")) || 0,
+    increment() {
+        this.likes = this.likes + 1;
+        localStorage.setItem("likes", this.likes);
+        this.render();
+    },
+    render() {
+        likeCount.textContent = `${this.likes} likes`;
+    }
+};
 
-    return {
-        increment() {
-            likes++;
-            updateLikeDisplay(likes);
-        },
-        getLikes() {return likes; }
-    };
-}
+LikeCounter.render(); // show the saved count immediately on load
 
-const counter = createLikeCounter();
 likeBtn.addEventListener("click", function() {
-    counter.increment();
+    LikeCounter.increment();
 });
 
 function getGreetingAfterDelay() {
@@ -92,3 +101,24 @@ try {
 }
 
 factBtn.addEventListener("click", loadFact);
+
+const locationBtn = document.querySelector("#location-btn");
+const locationDisplay = document.querySelector("#location-display");
+
+locationBtn.addEventListener("click", function() {
+    if (!("geolocation" in navigator)) {
+        locationDisplay.textContent = 
+        "Geolocation isn't supported.";
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+        const lat = position.coords.latitude.toFixed(2);
+        const lon = position.coords.longitude.toFixed(2);
+        locationDisplay.textContent = `You're near ${lat}, ${lon}`;
+    }, function(error) {
+        locationDisplay.textContent =
+        "Location access was denied.";
+    console.warn(error);
+    });
+});
